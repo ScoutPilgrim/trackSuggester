@@ -10,6 +10,9 @@
   </head>
   <body>
     <div class="container">
+      <div class="centerW">
+        <h1>Epicodus Track Suggester</h1>
+      </div>
       <form id="trackForm">
         <div class="form-group">
           <label for="nameInput">Your Full Name</label>
@@ -30,11 +33,43 @@
             </select>
           </div>
         </div>
+        <div class="form-group">
+          <label for="timeInput">Part-Time or Full Time</label>
+          <select class="form-control" id="timeInput">
+            <option value="parttime">Part-Time</option>
+            <option value="fulltime">Full-Time</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="interInput">Do you want a garunteed Internship?</label>
+          <select class="form-control" id="internInput">
+            <option value="internY">Yes</option>
+            <option value="internN">No</option>
+          </select>
+        </div>
         <div class="form-check">
           <input type="checkbox" class="form-check-input" id="introCheck">
           <label class="form-check-label" for="introCheck">I have completed the Intro and Javascript</label>
         </div>
+        <div class="form-group">
+          <button type='submit' class="btn btn-primary">Submit</button>
+        </div>
       </form>
+      <div class="forceHide" id="returnTrack">
+        <p>Hello, <span class="nameClass"></span>! Thank you for you interest in Epicodus!</p>
+      </div>
+      <div class="forceHide" id="noIntro">
+        <p><strong>Every Track requires the completion of Into to programming and Javascript</strong>. Since you haven't completed it, you must do that track first. However, after you finish introductory course, we recommend you take the <span class="myTrack"></span> track.</p>
+      </div>
+      <div class="forceHide" id="yesIntro">
+        <p>Congratulations on completing the Introduction to programming! Based on your interests, we recommend you take the <span class="myTrack"></span> track.</p>
+      </div>
+      <div class="forceHide" id="partTime">
+        <p>Unfortunately, the only course being offered that is Part-Time is our <strong>Intro to programming and Javascript</strong>. If you are looking for a more advanced Part-Time course, consider another coding bootcamp</p>
+      </div>
+      <div class="forceHide" id="yesIntern">
+        <p>Only our Full-Time programs garuntee and Intership.<span class="yesPartTime"><p>Since you are looking for Part-Time, you will <strong>NOT</strong> be garunteed an intership.</p></span></p>
+      </div>
     </div>
   </body>
 </html>
