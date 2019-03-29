@@ -9,7 +9,8 @@ $(document).ready(function(){
   });
   $('#trackForm').submit(function(event){
     event.preventDefault();
-    console.log('trackForm is being submitted')
+    $('#returnTrack').find("p:not('#originalP')").remove();
+    console.log('trackForm is being submitted');
     var name = $('#nameInput').val();
     var tech = $('#whichCareer').val();
     var optLang = $('#whichLang').val();
@@ -19,6 +20,8 @@ $(document).ready(function(){
     showReturn(name);
     trackReturn(tech, optLang);
     checkReturn(isCheck);
+    timeReturn(whichTime);
+    internReturn(whichIntern);
   });
   function showReturn(myName){
     console.log('showName is being called');
@@ -57,6 +60,27 @@ $(document).ready(function(){
       $('#returnTrack').append($('#yesIntro > p'));
     }else{
       $('#returnTrack').append($('#noIntro > p'));
+    }
+  }
+  function timeReturn(myTime){
+    console.log('timeReturn is being called');
+    switch (myTime) {
+      case 'parttime':
+        $('#returnTrack').append($('#partTime > p'));
+        $('.yesPartTime').show();
+        break;
+      case 'fulltime':
+        break;
+    }
+  }
+  function internReturn(myIntern){
+    console.log('internReturn is being called');
+    switch (myIntern) {
+      case 'internY':
+        $('#returnTrack').append($('#yesIntern > p'));
+        break;
+      case 'internN':
+        break;
     }
   }
 });
