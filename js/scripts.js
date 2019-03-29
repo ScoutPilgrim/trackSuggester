@@ -5,6 +5,8 @@ $(document).ready(function(){
     console.log(careerChk);
     if(careerChk === webChk){
       $('#langCheck').show();
+    }else{
+      $('#langCheck').hide();
     }
   });
   $('#trackForm').submit(function(event){
@@ -57,16 +59,16 @@ $(document).ready(function(){
   function checkReturn(myCheck){
     console.log('checkReturn is being called');
     if(myCheck){
-      $('#returnTrack').append($('#yesIntro > p'));
+      $('#returnTrack').append($('#yesIntro > p').clone(true));
     }else{
-      $('#returnTrack').append($('#noIntro > p'));
+      $('#returnTrack').append($('#noIntro > p').clone(true));
     }
   }
   function timeReturn(myTime){
     console.log('timeReturn is being called');
     switch (myTime) {
       case 'parttime':
-        $('#returnTrack').append($('#partTime > p'));
+        $('#returnTrack').append($('#partTime > p').clone(true));
         $('.yesPartTime').show();
         break;
       case 'fulltime':
@@ -77,7 +79,7 @@ $(document).ready(function(){
     console.log('internReturn is being called');
     switch (myIntern) {
       case 'internY':
-        $('#returnTrack').append($('#yesIntern > p'));
+        $('#returnTrack').append($('#yesIntern > p').clone(true));
         break;
       case 'internN':
         break;
