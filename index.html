@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>trackSuggester</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <div class="container">
+      <form id="trackForm">
+        <div class="form-group">
+          <label for="nameInput">Your Full Name</label>
+          <input type="text" class="form-control"id="nameInput" placeholder="First Last">
+        </div>
+        <div class="form-group">
+          <label for="whichCareer">Which tech career are you most ineterested in?</label>
+          <select class="form-control" id="whichCareer">
+            <option value="android">Android App Development</option>
+            <option value="webdev">Web Development</option>
+            <option value="game">Game Development</option>
+          </select>
+          <div class="form-group sub-form" id="langCheck">
+            <label for="whichLang">Which programming language sounds the most interesting to you?</label>
+            <select class="form-control" id="whichLang">
+              <option value="php">PHP</option>
+              <option value="js">Javascript</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input" id="introCheck">
+          <label class="form-check-label" for="introCheck">I have completed the Intro and Javascript</label>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
