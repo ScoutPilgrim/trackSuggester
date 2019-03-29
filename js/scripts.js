@@ -72,6 +72,7 @@ $(document).ready(function(){
         $('.yesPartTime').show();
         break;
       case 'fulltime':
+        $('.yesPartTime').hide();
         break;
     }
   }
